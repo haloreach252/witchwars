@@ -17,6 +17,7 @@ sysinfo.txt
 **/ProCore/**
 **/Witch Wars!/Assets/*.meta
 **/Witch Wars!/Assets/*.unity.meta
+**/Witch Wars!/Assets/**/*.*.meta
 
 ###
 # VS/MD solution and project files
