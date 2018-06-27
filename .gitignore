@@ -18,6 +18,8 @@ sysinfo.txt
 **/Witch Wars!/Assets/*.meta
 **/Witch Wars!/Assets/*.unity.meta
 **/Witch Wars!/Assets/**/*.*.meta
+**/*.*.meta
+**/*.meta
 
 ###
 # VS/MD solution and project files
