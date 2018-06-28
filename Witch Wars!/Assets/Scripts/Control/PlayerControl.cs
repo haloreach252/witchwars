@@ -6,19 +6,17 @@
 using UnityEngine;
 using Sirenix.OdinInspector;
 
-public class Building : MonoBehaviour {
+public class PlayerControl : MonoBehaviour {
 
 	#region Variables
-	public BuildingSO buildingSO;
-	public float health;
-
+	
 	#endregion
 	
 	#region Methods
 
 	void Start () 
 	{
-		health = buildingSO.buildingHP;
+		
 	}
 	
 	void Update () 
