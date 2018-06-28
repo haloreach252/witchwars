@@ -4,9 +4,10 @@
 */
 
 using UnityEngine;
+using UnityEngine.Networking;
 using Sirenix.OdinInspector;
 
-public class UpgradeSpells : MonoBehaviour {
+public class UpgradeSpells : NetworkBehaviour {
 
 	#region Variables
 	public SpellSO[] spells;
@@ -14,15 +15,7 @@ public class UpgradeSpells : MonoBehaviour {
 	
 	#region Methods
 
-	void Start () 
-	{
-		
-	}
 	
-	void Update () 
-	{
-		
-	}
 	
 	#endregion
 }

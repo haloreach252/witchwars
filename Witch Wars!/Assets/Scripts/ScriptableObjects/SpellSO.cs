@@ -6,6 +6,7 @@
 using UnityEngine;
 using Sirenix.OdinInspector;
 
+[System.Serializable]
 [CreateAssetMenu(fileName = "New Spell", menuName = "Custom/Spell", order = 2)]
 public class SpellSO : ScriptableObject {
 

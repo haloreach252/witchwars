@@ -6,6 +6,7 @@
 using UnityEngine;
 using Sirenix.OdinInspector;
 
+[System.Serializable]
 [CreateAssetMenu(fileName = "New Potion", menuName = "Custom/Potion", order = 1)]
 public class PotionSO : ScriptableObject {
 
