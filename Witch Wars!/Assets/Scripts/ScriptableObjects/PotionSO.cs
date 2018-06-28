@@ -10,9 +10,12 @@ using Sirenix.OdinInspector;
 [CreateAssetMenu(fileName = "New Potion", menuName = "Custom/Potion", order = 1)]
 public class PotionSO : ScriptableObject {
 
+	[Title("Text Attributes")]
 	public string potionName;
 	[TextArea]
 	public string potionDescription;
+	[Space(7)]
+	[Title("Time and radius Attributes")]
 	public float brewTime;
 	public float potionEffectRadius;
 	public enum PotionEffect
@@ -23,8 +26,14 @@ public class PotionSO : ScriptableObject {
 		FLAME,
 		HEALING
 	}
+	[Space(7)]
+	[Title("Effect Attributes")]
 	public PotionEffect potionEffect;
 	public float effectTime;
 	public float effectValue;
+	[Space(7)]
+	[Title("Upgrade Attributes")]
+	public float effectTimeUpgrade;
+	public float effectValueUpgrade;
 
 }

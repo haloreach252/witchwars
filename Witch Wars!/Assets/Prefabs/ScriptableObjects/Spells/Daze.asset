@@ -21,3 +21,6 @@ MonoBehaviour:
   spellEffect: 3
   effectValue: 6
   objectToSummon: {fileID: 0}
+  amountToSummon: 0
+  amountToSummonUpgrade: 0
+  effectValueUpgrade: 1

@@ -12,6 +12,7 @@ public class CameraControl : NetworkBehaviour {
 	#region Variables
 	public float xSpeed;
 	public float zSpeed;
+	public new GameObject camera;
 	#endregion
 
 	#region Methods
@@ -33,7 +34,7 @@ public class CameraControl : NetworkBehaviour {
 		float deltaZ = Input.GetAxis("Vertical") * zSpeed;
 
 		Vector3 trans = new Vector3(deltaX, 0f, deltaZ);
-		Camera.main.transform.Translate(trans * Time.deltaTime, Space.World);
+		camera.transform.Translate(trans * Time.deltaTime, Space.World);
 	}
 	
 	#endregion
