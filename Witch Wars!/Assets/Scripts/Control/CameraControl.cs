@@ -12,6 +12,10 @@ public class CameraControl : NetworkBehaviour {
 	#region Variables
 	public float xSpeed;
 	public float zSpeed;
+
+	public float rotateSpeed;
+
+	public GameObject camHold;
 	public new GameObject camera;
 	#endregion
 
@@ -26,6 +30,7 @@ public class CameraControl : NetworkBehaviour {
 	{
 		if (!isLocalPlayer)
 		{
+			camera.SetActive(false);
 			return;
 		}
 
@@ -33,8 +38,15 @@ public class CameraControl : NetworkBehaviour {
 		float deltaX = Input.GetAxis("Horizontal") * xSpeed;
 		float deltaZ = Input.GetAxis("Vertical") * zSpeed;
 
+		float rotY = Input.GetAxis("Rotate") * rotateSpeed;
+
+		Vector3 rot = new Vector3(0, -rotY, 0);
 		Vector3 trans = new Vector3(deltaX, 0f, deltaZ);
-		camera.transform.Translate(trans * Time.deltaTime, Space.World);
+		camHold.transform.Translate(trans * Time.deltaTime);
+
+		camHold.transform.Rotate(rot * Time.deltaTime);
+
+		//camera.transform.Translate(trans * Time.deltaTime);
 	}
 	
 	#endregion
