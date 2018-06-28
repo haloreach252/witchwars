@@ -4,6 +4,7 @@
 */
 
 using UnityEngine;
+using UnityEngine.Networking;
 using Sirenix.OdinInspector;
 
 public class Potion : MonoBehaviour {
