@@ -10,9 +10,14 @@ using Sirenix.OdinInspector;
 public class CameraControl : NetworkBehaviour {
 
 	#region Variables
-	public float speed;
+	public float xSpeed;
+	public float zSpeed;
+
+	public float minFov;
+	public float maxFov;
+	public float sensitivity;
 	#endregion
-	
+
 	#region Methods
 
 	void Start () 
@@ -22,22 +27,18 @@ public class CameraControl : NetworkBehaviour {
 	
 	void Update () 
 	{
-		if (Input.GetKey(KeyCode.D))
-		{
-			transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
-		}
-		if (Input.GetKey(KeyCode.A))
-		{
-			transform.Translate(new Vector3(-speed * Time.deltaTime, 0, 0));
-		}
-		if (Input.GetKey(KeyCode.S))
-		{
-			transform.Translate(new Vector3(0, 0, -speed * Time.deltaTime));
-		}
-		if (Input.GetKey(KeyCode.W))
-		{
-			transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
-		}
+		//Movement
+		float deltaX = Input.GetAxis("Horizontal") * xSpeed;
+		float deltaZ = Input.GetAxis("Vertical") * zSpeed;
+
+		Vector3 trans = new Vector3(deltaX, 0f, deltaZ);
+		transform.Translate(trans * Time.deltaTime, Space.World);
+
+		//Zooming
+		float fov = Camera.main.fieldOfView;
+		fov += Input.GetAxis("Mouse ScrollWheel") * sensitivity;
+		fov = Mathf.Clamp(fov, minFov, maxFov);
+		Camera.main.fieldOfView = fov;
 	}
 	
 	#endregion
