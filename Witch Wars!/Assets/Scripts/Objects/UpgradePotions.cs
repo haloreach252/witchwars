@@ -7,12 +7,10 @@ using UnityEngine;
 using UnityEngine.Networking;
 using Sirenix.OdinInspector;
 
-public class PlayerControl : NetworkBehaviour {
+public class UpgradePotions : NetworkBehaviour {
 
 	#region Variables
-	public float gold;
-	public float mana;
-	public int level;
+	public PotionSO[] potions;
 	#endregion
 	
 	#region Methods

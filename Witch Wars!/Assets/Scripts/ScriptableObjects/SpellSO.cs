@@ -25,5 +25,6 @@ public class SpellSO : ScriptableObject {
 		SUMMON
 	}
 	public SpellEffect spellEffect;
+	public float effectValue;
 	public GameObject objectToSummon;
 }

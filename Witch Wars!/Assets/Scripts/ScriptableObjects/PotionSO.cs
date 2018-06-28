@@ -12,8 +12,8 @@ public class PotionSO : ScriptableObject {
 	public string potionName;
 	[TextArea]
 	public string potionDescription;
+	public float brewTime;
 	public float potionEffectRadius;
-	public float potionDamage;
 	public enum PotionEffect
 	{
 		DAMAGE,
@@ -24,5 +24,6 @@ public class PotionSO : ScriptableObject {
 	}
 	public PotionEffect potionEffect;
 	public float effectTime;
+	public float effectValue;
 
 }

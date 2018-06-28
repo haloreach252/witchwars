@@ -24,5 +24,10 @@ public class ButtonControl : MonoBehaviour {
 		goToDisable.SetActive(false);
 	}
 
+	public void Upgrade(string upgrade)
+	{
+
+	}
+
 	#endregion
 }

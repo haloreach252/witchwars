@@ -9,10 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00f06fd6ea646c64ead6d8b7a55879ed, type: 3}
-  m_Name: DamagePotion
+  m_Name: HealthPotion
   m_EditorClassIdentifier: 
-  potionName: Damage Potion
-  potionDescription: A potion that releases shrapnel and damages the other witch
-  potionRadius: 3
-  potionDamage: 10
-  potionEffect: 0
+  potionName: Health Potion
+  potionDescription: A potion created with just the right amounts of stuff to keep
+    you alive, stay that way.
+  brewTime: 30
+  potionEffectRadius: 0
+  potionEffect: 4
+  effectTime: 0
+  effectValue: 30

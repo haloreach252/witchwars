@@ -4,15 +4,12 @@
 */
 
 using UnityEngine;
-using UnityEngine.Networking;
 using Sirenix.OdinInspector;
 
-public class PlayerControl : NetworkBehaviour {
+public class UpgradeSpells : MonoBehaviour {
 
 	#region Variables
-	public float gold;
-	public float mana;
-	public int level;
+	public SpellSO[] spells;
 	#endregion
 	
 	#region Methods
