@@ -6,7 +6,7 @@
 using UnityEngine;
 using Sirenix.OdinInspector;
 
-[CreateAssetMenu(fileName = "New Spell", menuName = "Custom/Spell", order = 2)]
+[CreateAssetMenu(fileName = "New Building", menuName = "Custom/Building", order = 3)]
 public class BuildingSO : ScriptableObject{
 
 	public string buildingName;
