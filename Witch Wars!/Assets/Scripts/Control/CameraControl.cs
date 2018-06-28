@@ -13,8 +13,8 @@ public class CameraControl : NetworkBehaviour {
 	public float xSpeed;
 	public float zSpeed;
 
-	public float minFov;
-	public float maxFov;
+	public float minZoom;
+	public float maxZoom;
 	public float sensitivity;
 	#endregion
 
@@ -33,12 +33,6 @@ public class CameraControl : NetworkBehaviour {
 
 		Vector3 trans = new Vector3(deltaX, 0f, deltaZ);
 		transform.Translate(trans * Time.deltaTime, Space.World);
-
-		//Zooming
-		float fov = Camera.main.fieldOfView;
-		fov += Input.GetAxis("Mouse ScrollWheel") * sensitivity;
-		fov = Mathf.Clamp(fov, minFov, maxFov);
-		Camera.main.fieldOfView = fov;
 	}
 	
 	#endregion
