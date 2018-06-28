@@ -12,10 +12,6 @@ public class CameraControl : NetworkBehaviour {
 	#region Variables
 	public float xSpeed;
 	public float zSpeed;
-
-	public float minZoom;
-	public float maxZoom;
-	public float sensitivity;
 	#endregion
 
 	#region Methods
@@ -27,6 +23,11 @@ public class CameraControl : NetworkBehaviour {
 	
 	void Update () 
 	{
+		if (!isLocalPlayer)
+		{
+			return;
+		}
+
 		//Movement
 		float deltaX = Input.GetAxis("Horizontal") * xSpeed;
 		float deltaZ = Input.GetAxis("Vertical") * zSpeed;
