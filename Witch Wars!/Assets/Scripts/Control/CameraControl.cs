@@ -33,7 +33,7 @@ public class CameraControl : NetworkBehaviour {
 		float deltaZ = Input.GetAxis("Vertical") * zSpeed;
 
 		Vector3 trans = new Vector3(deltaX, 0f, deltaZ);
-		transform.Translate(trans * Time.deltaTime, Space.World);
+		Camera.main.transform.Translate(trans * Time.deltaTime, Space.World);
 	}
 	
 	#endregion
